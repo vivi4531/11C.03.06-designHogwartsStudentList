@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11C.03.06 design hogwarts student list</title>
+</head>
+<body>
+    <h1>Hogwarts School Of Witchcraft and Wizardry</h1>
+    <h2>Class of 1991</h2>
+
+    <div class="gryffindor"></div>
+    <div class="hufflepuff"></div>
+    <div class="rawenclaw"></div>
+    <div class="slytherin"></div>
+    
+<main>
+    <!-- FILTER BUTTONS -->
+    <div class="filterbuttons">
+        <button class="filterbuttons chosen raise" data-item="all">All students</button>
+        <button class="filterbuttons raise" data-item="pulp-fiction">Pulp Fiction</button>
+        <button class="filterbuttons raise" data-item="fight-club">Fight Club</button>
+        <button class="filterbuttons raise" data-item="goodfellas">Goodfellas</button>
+        <button class="filterbuttons raise" data-item="inception">Inception</button>
+    </div>
+
+    <!-- STUDENT LIST -->
+    <section id="container"></section>
+    <template>
+        <article id="grid-article">
+            <h3 class="firstname"></h3>
+            <h3 class="middlename"></h3>
+            <h3 class="nickname"></h3>
+            <h3 class="lastname"></h3>
+        </article>
+    </template>
+
+    <!-- STUDENT POPUP -->
+    <section id="popup">
+        <article>
+            <button id="close-popup">X</button>
+            <img src="" alt="" />
+            <div>
+                <h2></h2>
+                <p><span class="lang"></span></p>
+            </div>
+        </article>
+    </section>
+
+</main>
+
+<footer>© Vivi Mortensen 2021</footer>
+
+    
+</body>
+</html>
