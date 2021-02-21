@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11C.03.06 design hogwarts student list</title>
+    <link rel="stylesheet" href="designhogwarts.css">
 </head>
 <body>
     <h1>Hogwarts School Of Witchcraft and Wizardry</h1>
     <h2>Class of 1991</h2>
-
-    <div class="gryffindor"></div>
-    <div class="hufflepuff"></div>
-    <div class="rawenclaw"></div>
-    <div class="slytherin"></div>
     
 <main>
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
+
+    <!-- SORTING BUTTONS -->
+    <div class="sortingbuttons">
+        <button class="sortingbuttons chosen raise" data-item="firstname">Firstname</button>
+        <button class="sortingbuttons raise" data-item="lastname">Lastname</button>
+        <button class="sortingbuttons raise" data-item="house">House</button>
+    </div>
+
     <!-- FILTER BUTTONS -->
     <div class="filterbuttons">
         <button class="filterbuttons chosen raise" data-item="all">All students</button>
-        <button class="filterbuttons raise" data-item="pulp-fiction">Pulp Fiction</button>
-        <button class="filterbuttons raise" data-item="fight-club">Fight Club</button>
-        <button class="filterbuttons raise" data-item="goodfellas">Goodfellas</button>
-        <button class="filterbuttons raise" data-item="inception">Inception</button>
+        <button class="filterbuttons raise" data-item="gryffindor">Gryffindor</button>
+        <button class="filterbuttons raise" data-item="hufflepuff">Hufflepuff</button>
+        <button class="filterbuttons raise" data-item="rawenclaw">Rawenclaw</button>
+        <button class="filterbuttons raise" data-item="slytherin">Slytherin</button>
+        <button class="filterbuttons raise" data-item="expelled">Expelled</button>
     </div>
 
     <!-- STUDENT LIST -->
@@ -30,9 +44,8 @@
     <template>
         <article id="grid-article">
             <h3 class="firstname"></h3>
-            <h3 class="middlename"></h3>
-            <h3 class="nickname"></h3>
             <h3 class="lastname"></h3>
+            <h3 class="house"></h3>
         </article>
     </template>
 
@@ -48,6 +61,15 @@
         </article>
     </section>
 
+
+<!-- Gradients to popup house colors -->
+
+<div class="gryffindor"></div>
+<div class="hufflepuff"></div>
+<div class="rawenclaw"></div>
+<div class="slytherin"></div>
+
+<div><p>Arrow to top</p></div>
 </main>
 
 <footer>© Vivi Mortensen 2021</footer>
